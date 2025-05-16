@@ -14,7 +14,6 @@ jobs:
 
       # nodeの使用準備
       - uses: actions/setup-node@v4
-        id: setup_node
         with:
           node-version: 20.11.1
 
