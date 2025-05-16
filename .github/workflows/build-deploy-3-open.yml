@@ -3,6 +3,9 @@ name: build-deploy-3-open
 on:
   pull_request:
 
+permissions:
+  pull-requests: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
