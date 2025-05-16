@@ -1,0 +1,19 @@
+name: build-deploy-3-close
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  close:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      # swaをclose
+      - uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.SWA_DEPLOY_TOKEN }}
+          action: "close"
+          app_location: ""
